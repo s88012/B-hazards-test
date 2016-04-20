@@ -2,7 +2,7 @@
 !ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 !ccc
 !ccc   FORTRAN Codes for time-varying coeff. models & testing the equivalence of hazards   
-!ccc   (Bayesin Analysis) 
+!ccc   (Bayesian Analysis) 
 !ccc
 !ccc   2014.01.01 / 2016.04.20 (rearranged) 
 !ccc   by G. Kim 
@@ -15,7 +15,7 @@
       integer             od, d, sh, itr, burn, num, loc
       integer, dimension(12) :: seed = (/1,3,5,7,8,10,3,4,5,6,7,8/) 
 
-      double precision    sm,sde1,sde2,p
+      double precision    sm, sde1, sde2, p
       integer             ndata, nn, thin, thinnum  
       parameter           (ndata = 100, d = 5, sde1 = 1.0, sde2 = 1.0)
 !cc                        sample size, the number of B-spline basis functions 
