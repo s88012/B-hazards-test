@@ -202,8 +202,8 @@
 
 602        continue
 
-           do 603 kk = 1, 1 
-              lk(i) = lk(i) - 0.5 * B(1)**2 / (sde**2)  
+           do 603 kk = 1, d 
+              lk(i) = lk(i) - 0.5 * B(kk)**2 / (sde**2)  
 
 603        continue
               lk(i) = lk(i) + dlog( 1 - pp(i) ) 
@@ -212,7 +212,7 @@
 
            if (gamma.eq.1.0) then
               call gval_atom(B, DXX, XX, zz, ndata, d, gam11)
-              call get_beta(B(1), 1, B, DXX, ndata, 1, gam1)  
+              call get_beta(B(1), 1, B, DXX, ndata, d, gam1)  
             do 604 kk=1, ndata
               lk(i) = lk(i) + (gam1(kk) * zz(kk) - E(kk) * gam11(kk)) * XX(kk, 2)               
 
